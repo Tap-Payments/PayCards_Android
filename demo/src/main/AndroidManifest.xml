@@ -10,7 +10,9 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".IntroActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/wocr_TransparentCompat"
+            >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +24,7 @@
             android:name=".CardDetailsActivity"
             android:parentActivityName=".IntroActivity"
             android:windowSoftInputMode="adjustResize"
+            android:theme="@style/wocr_TransparentCompat"
             tools:ignore="UnusedAttribute">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
