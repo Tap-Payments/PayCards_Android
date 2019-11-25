@@ -61,6 +61,7 @@ dependencies {
     implementation "com.facebook.device.yearclass:yearclass:$rootProject.ext.yearclassVersion"
 
     testImplementation "junit:junit:$rootProject.ext.junitVersion"
+    implementation 'com.android.support:support-annotations:28.0.0'
 }
 
 afterEvaluate { project ->
