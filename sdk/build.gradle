@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
-apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.Tap-Payments'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -64,14 +65,14 @@ dependencies {
     implementation 'com.android.support:support-annotations:28.0.0'
 }
 
-afterEvaluate { project ->
-    android.libraryVariants.all { variant ->
-        tasks.androidJavadocs.doFirst {
-            include '**/cards/pay/paycardsrecognizer/sdk/*.java'
-            options.encoding = "utf-8"
-            options.charSet = "utf-8"
-            options.showFromPublic()
-            failOnError false
-        }
-    }
-}
+//afterEvaluate { project ->
+//    android.libraryVariants.all { variant ->
+//        tasks.androidJavadocs.doFirst {
+//            include '**/cards/pay/paycardsrecognizer/sdk/*.java'
+//            options.encoding = "utf-8"
+//            options.charSet = "utf-8"
+//            options.showFromPublic()
+//            failOnError false
+//        }
+//    }
+//}
