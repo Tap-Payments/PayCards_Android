@@ -1709,17 +1709,17 @@ if( NOT _CMAKE_IN_TRY_COMPILE )
 endif()
 
 
-# force cmake to produce / instead of \ in build commands for Ninja generator
-if( CMAKE_GENERATOR MATCHES "Ninja" AND CMAKE_HOST_WIN32 )
- # it is a bad hack after all
- # CMake generates Ninja makefiles with UNIX paths only if it thinks that we are going to build with MinGW
- set( CMAKE_COMPILER_IS_MINGW TRUE ) # tell CMake that we are MinGW
- set( CMAKE_CROSSCOMPILING TRUE )    # stop recursion
- enable_language( C )
- enable_language( CXX )
- # unset( CMAKE_COMPILER_IS_MINGW ) # can't unset because CMake does not convert back-slashes in response files without it
- unset( MINGW )
-endif()
+## force cmake to produce / instead of \ in build commands for Ninja generator
+#if( CMAKE_GENERATOR MATCHES "Ninja" AND CMAKE_HOST_WIN32 )
+# # it is a bad hack after all
+# # CMake generates Ninja makefiles with UNIX paths only if it thinks that we are going to build with MinGW
+# set( CMAKE_COMPILER_IS_MINGW TRUE ) # tell CMake that we are MinGW
+# set( CMAKE_CROSSCOMPILING TRUE )    # stop recursion
+# enable_language( C )
+# enable_language( CXX )
+# # unset( CMAKE_COMPILER_IS_MINGW ) # can't unset because CMake does not convert back-slashes in response files without it
+# unset( MINGW )
+#endif()
 
 
 # Variables controlling behavior or set by cmake toolchain:
